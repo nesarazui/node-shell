@@ -13,10 +13,11 @@ process.stdin.on('data', data => {
 // console.log('with toString:', data.toString());
 // console.log('with trim:', data.toString().trim());
 
-process.stdout.write('prompt >');
+const pwd = require('./pwd')
 
-process.stdin.on('data', data => {
-  if (data.toString().trim() === 'pwd') {
-    process.stdout.write(process.cwd());
-  }
-});
+// console.log(prompt)
+// console.log(pwd)
+
+pwd()
+
+const ls = require('./ls')
